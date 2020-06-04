@@ -3838,3 +3838,16 @@ a.link-style3 {
 .course-meta-bot ul li:hover {
   color: #eea412;
 }
+
+p.comment-form-cookies-consent {
+  display: none;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.comment-respond {
+  width: 100%;
+}

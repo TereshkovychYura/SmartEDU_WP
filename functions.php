@@ -57,3 +57,13 @@ function add_menuclass($ulclass) {
   return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
 }
 add_filter('wp_nav_menu','add_menuclass');
+
+function prefix_move_comment_field_to_bottom( $fields ) {
+ 
+  $comment_field = $fields['comment'];
+  unset( $fields['comment'] );
+  $fields['comment'] = $comment_field;
+  return $fields;
+
+}
+add_filter( 'comment_form_fields',      'prefix_move_comment_field_to_bottom', 10, 1 );
